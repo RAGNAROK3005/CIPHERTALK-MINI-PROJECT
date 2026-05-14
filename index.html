@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CipherTalk — Secure Message Encryption</title>
+  <meta name="description" content="Encrypt & decrypt messages with CipherTalk — a lightweight cybersecurity playground." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- ===== Navbar ===== -->
+  <nav class="nav">
+    <a href="#" class="brand">
+      <span class="logo">⌬</span> CipherTalk
+    </a>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#console">Console</a></li>
+      <li><a href="#features">Features</a></li>
+      <li><a href="#login">Login</a></li>
+    </ul>
+  </nav>
+
+  <!-- ===== Hero ===== -->
+  <header id="home" class="hero">
+    <div class="grid-bg"></div>
+    <div class="badge">🛡 End-to-end client-side cipher</div>
+    <h1>
+      Encrypt the unsayable.<br />
+      <span class="gradient">Decrypt the impossible.</span>
+    </h1>
+    <p class="lead">
+      CipherTalk turns plain text into
+      <span id="typewriter" class="cyber"></span>
+    </p>
+    <div class="cta">
+      <a href="#console" class="btn btn-cyber">🔒 Launch Console</a>
+      <a href="#features" class="btn btn-ghost">Learn more</a>
+    </div>
+  </header>
+
+  <!-- ===== Cipher Console ===== -->
+  <section id="console" class="container">
+    <div class="glass console">
+      <div class="console-head">
+        <h3>🔑 Cipher Console</h3>
+        <label>
+          Shift key
+          <input type="number" id="shift" value="3" />
+        </label>
+      </div>
+
+      <textarea id="input" rows="5" placeholder="Type or paste your secret message here..."></textarea>
+
+      <div class="actions">
+        <button id="btn-encrypt" class="btn btn-cyber">🔒 Encrypt</button>
+        <button id="btn-decrypt" class="btn btn-violet">🔓 Decrypt</button>
+        <button id="btn-clear" class="btn btn-ghost">🗑 Clear</button>
+      </div>
+
+      <div class="output-head">
+        <span>OUTPUT</span>
+        <button id="btn-copy" class="btn btn-ghost small">📋 Copy</button>
+      </div>
+      <div id="output" class="output">// Awaiting input — encrypted output appears here.</div>
+    </div>
+  </section>
+
+  <!-- ===== Features ===== -->
+  <section id="features" class="container features">
+    <div class="glass card">
+      <h3>🔒 Zero data leaves</h3>
+      <p>All encryption runs locally in your browser — your message never touches a server.</p>
+    </div>
+    <div class="glass card">
+      <h3>⚙ C-powered logic</h3>
+      <p>Mirrors a documented C backend (Caesar cipher) you can compile and run yourself.</p>
+    </div>
+    <div class="glass card">
+      <h3>⚡ Instant cipher</h3>
+      <p>Tweak the shift key and watch your text transform character by character in real time.</p>
+    </div>
+  </section>
+
+  <!-- ===== Simple Login (UI only) ===== -->
+  <section id="login" class="container">
+    <form class="glass login" onsubmit="event.preventDefault(); alert('Demo only — no auth backend.');">
+      <h3>🔐 Login</h3>
+      <input type="email" placeholder="agent@cipher.io" required />
+      <input type="password" placeholder="••••••••" required />
+      <button type="submit" class="btn btn-cyber">Sign in</button>
+      <p class="hint">UI demo only. No credentials are stored.</p>
+    </form>
+  </section>
+
+  <footer class="footer">
+    <p>© <span id="year"></span> CipherTalk — Built for learning cybersecurity.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
